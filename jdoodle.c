@@ -1,16 +1,34 @@
- #include<stdio.h>
+#include<stdio.h>
+#include<string.h>
 
-int main()
+int main() 
 {
-    int w;
-    scanf("%d",&w);
-    if(w%2==0 && w!=2)
+    char array[100];
+ 
+    scanf("%s\n",&array);
+    int i,cnt=0,j,k,l,len=0;
+    len = strlen(array);
+    
+    for(i=0;i<len;i++)
+    {
+        if (array[i]=='Q')
         {
-            printf("YES");
+            for(j=i+1;j<len;j++)
+            {
+                if(array[j]=='A')
+                {
+                    for(l=j+1;l<len;l++)
+                    {
+                        if(array[l]=='Q')
+                        {
+                            cnt++;
+                        }
+                    }
+                }
+            }
         }
-    else
-        {
-            printf("NO");
-        }
+    }
+
+    printf("%d",cnt);
     return 0;
 }
