@@ -2,13 +2,25 @@
 
 int main()
 {
-    int n,m,min,max,l,k,o;
-    scanf("%d %d",&n,&m);
-    max=(n-m)*(n-m+1)/2;
-    l=n%m;
-    k=n/m;
-    o=n/m+1;
-    min=(m-l)*(k-1)*(k)/2+l*o*(o-1)/2;
-    printf("%d %d\n",max,min);
+    int n,k,m=0,i;
+    int a[100];
+    
+    scanf("%d\n",&n);
+    scanf("%d\n",&k);
+    
+    for(i=0; i<n; i++)
+    {
+        scanf("%d\n",&a[i]);
+    }
+    
+    for(i=0; i<n; i++)
+    {
+        if(a[i]>=a[k-1] && a[i]>0)
+        {
+            m++;
+        }
+    }
+    
+    printf("%d",m);
     return 0;
 }
