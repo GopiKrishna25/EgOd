@@ -1,34 +1,26 @@
 #include<stdio.h>
 #include<string.h>
 
-int main() 
-{
-    char array[100];
- 
-    scanf("%s\n",&array);
-    int i,cnt=0,j,k,l,len=0;
-    len = strlen(array);
-    
-    for(i=0;i<len;i++)
+int main() {
+    int n,i,l;
+    char s[100];
+
+    printf("Enter any integer:\n");
+    scanf("%d",&n);
+    while(n--)
     {
-        if (array[i]=='Q')
+
+        scanf("%s",&s);
+        l=strlen(s);
+        if(l>10)
         {
-            for(j=i+1;j<len;j++)
-            {
-                if(array[j]=='A')
-                {
-                    for(l=j+1;l<len;l++)
-                    {
-                        if(array[l]=='Q')
-                        {
-                            cnt++;
-                        }
-                    }
-                }
-            }
+            printf("%c %d %c\n", s[0], l-2, s[l-1]);
+        }
+        else
+        {
+            printf("%s\n",s);
         }
     }
-
-    printf("%d",cnt);
-    return 0;
+    
+    
 }
