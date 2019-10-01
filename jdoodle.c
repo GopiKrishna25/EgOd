@@ -2,25 +2,33 @@
 #include<string.h>
 
 int main() {
-    int n,i,l;
-    char s[100];
-
-    printf("Enter any integer:\n");
-    scanf("%d",&n);
-    while(n--)
+    int i,n=0,p;
+    char a[100];
+    
+    scanf("%s\n",&a);
+    n=strlen(a);
+    
+    for(i=0;i<n;i++)
     {
-
-        scanf("%s",&s);
-        l=strlen(s);
-        if(l>10)
+        if(a[i]=='0' && a[i+1]=='0' && a[i+2]=='0' && a[i+3]=='0' && a[i+4]=='0' && a[i+5]=='0' && a[i+6]=='0')
         {
-            printf("%c %d %c\n", s[0], l-2, s[l-1]);
+            p=7;
         }
-        else
+        else if(a[i]=='1' && a[i+1]=='1' && a[i+2]=='1' && a[i+3]=='1' && a[i+4]=='1' && a[i+5]=='1' && a[i+6]=='1')
         {
-            printf("%s\n",s);
+            p=7;
+            break;
         }
     }
     
+    if(p==7)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
     
+    return 0;
 }
