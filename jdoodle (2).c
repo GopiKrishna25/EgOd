@@ -3,46 +3,24 @@
 
 int main()
 {
-    int i;
-    char a[100];
-    scanf("%s",a);
+    int i,j,l;
+    char s[100],temp;
+    scanf("%s\n",&s);
+    l=strlen(s);
     
-    
-    for(i=0; i<strlen(a); i++)
+    for(i=0;i<l;i++)
     {
-        if(a[i]=='A')
-        a[i]='0';
-            else if(a[i]=='O')
-            a[i]='0';
-                else if(a[i]=='Y')
-                a[i]='0';
-                    else if(a[i]=='E')
-                    a[i]='0';
-                        else if(a[i]=='U')
-                        a[i]='0';
-                            else if(a[i]=='I')
-                            a[i]='0';
-                                else if(a[i]=='a')
-                                a[i]='0';
-                                    else if(a[i]=='o')
-                                    a[i]='0';
-                                        else if(a[i]=='y')
-                                        a[i]='0';
-                                            else if(a[i]=='e')
-                                            a[i]='0';
-                                                else if(a[i]=='u')
-                                                a[i]='0';
-                                                    if(a[i]=='i')
-                                                    a[i]='0';
-    }
-    
-    for(i=0; i<strlen(a); i++)
-    {
-        if(a[i]!='0')
+        for(j=0;j<l-i-2;j++)
         {
-            printf(".%c",a[i]);
+            if(s[j]>s[j+2])
+            {
+                temp=s[j];
+                s[j]=s[j+2];
+                s[j+2]=temp;
+            }
         }
     }
-
+    
+    printf("%s\n",s);
     return 0;
 }

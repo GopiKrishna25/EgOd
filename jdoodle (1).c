@@ -1,26 +1,14 @@
 #include<stdio.h>
+#include<stdlib.h>
+
 
 int main()
 {
-    int n,k,m=0,i;
-    int a[100];
+    int i;
+    char a[100];
+    scanf("%s\n",&a);
     
-    scanf("%d\n",&n);
-    scanf("%d\n",&k);
-    
-    for(i=0; i<n; i++)
-    {
-        scanf("%d\n",&a[i]);
-    }
-    
-    for(i=0; i<n; i++)
-    {
-        if(a[i]>=a[k-1] && a[i]>0)
-        {
-            m++;
-        }
-    }
-    
-    printf("%d",m);
+    a[0]= toupper(a[0]);
+    printf("%s\n",a);
     return 0;
 }
