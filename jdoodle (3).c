@@ -1,22 +1,23 @@
 #include<stdio.h>
 #include<string.h>
+#include<ctype.h>
+
 int main()
 {
-  int n,a,b,temp=0,i,f=0;
-  scanf("%d",&n);
-  for(i=1;i<=n;i++)
-  {
-    scanf("%d %d",&a,&b);
-    temp=temp-a+b;
-    if(i==1)
+    int i,l=0;
+    char a[100];
+    
+    scanf("%s\n",&a);
+    l=strlen(a);
+    
+    a[0]=toupper(a[0]);
+    
+    for(i=1;i<l;i++)
     {
-        f=temp;
+        a[i]=tolower(a[i]);
     }
-    if(f<=temp)
-    {
-        f=temp;
-    }
-  }
-  printf("%d",f);
-  return 0;
+    
+    printf("%s\n",a);
+    
+    return 0;
 }
