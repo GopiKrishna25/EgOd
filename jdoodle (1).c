@@ -1,14 +1,27 @@
 #include<stdio.h>
-#include<stdlib.h>
-
 
 int main()
 {
-    int i;
-    char a[100];
-    scanf("%s\n",&a);
+    int x,y,z,n;
+    int a=0,b=0,c=0;
     
-    a[0]= toupper(a[0]);
-    printf("%s\n",a);
+    scanf("%d\n",&n);
+    while(n--)
+    {
+        scanf("%d%d%d\n",&x,&y,&z);
+        a+=x;
+        b+=y;
+        c+=z;
+    }
+    
+    if(a==0&&b==0&&c==0)
+    {
+        printf("Yes\n");
+    }
+    else
+    {
+        printf("No\n");
+    }
+    
     return 0;
 }
