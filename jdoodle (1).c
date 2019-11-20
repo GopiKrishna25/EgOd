@@ -1,20 +1,23 @@
 #include<stdio.h>
+#include<string.h>
+
 
 int main()
 {
-    int x,y,z,n;
-    int a=0,b=0,c=0;
+    int i,j,cnt=0;
+    char n[30];
     
-    scanf("%d\n",&n);
-    while(n--)
+    scanf("%s",&n);
+    
+    for(i=0;i<strlen(n);i++)
     {
-        scanf("%d%d%d\n",&x,&y,&z);
-        a+=x;
-        b+=y;
-        c+=z;
+        if(n[i]=='4' || n[i]=='7')
+        {
+            cnt++;
+        }
     }
     
-    if(a==0&&b==0&&c==0)
+    if(cnt==4||cnt==7)
     {
         printf("Yes\n");
     }

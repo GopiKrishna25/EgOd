@@ -1,23 +1,24 @@
 #include<stdio.h>
 #include<string.h>
 
-int main()
-{
-    int i,j,l,n;
-    char s[100],a[5]="hello";
-    scanf("%s\n",&s);
-    l=strlen(s);
+int main() {
+    int i,j,l1,l2,cnt=0;
+    char s[100],t[100];
+
+    scanf("%s%s",&s,&t);
     
-    for(i=0;i<l;i++)
+    l1=strlen(s);
+    l2=strlen(t);
+    
+    for(i=0,j=l2-1; i<l1,j>=0; i++,j--)
     {
-        if(s[i]==a[j])
+        if(s[i]==t[j])
         {
-            j++;
-            n++;
+            cnt++;
         }
     }
     
-    if(n==5)
+    if(cnt==l1)
     {
         printf("Yes\n");
     }
@@ -25,6 +26,6 @@ int main()
     {
         printf("No\n");
     }
-    
+
     return 0;
 }

@@ -2,30 +2,22 @@
 
 int main()
 {
-    int n,i=0,j=0;
-    int a[10]={4,7,47,74,447,474,744,7447,774,477};
+    int n,i,l,j,cnt=0;
     
     scanf("%d\n",&n);
     
-    for(i=0;i<10;i++)
+    for(i=0;i<n;i++)
     {
-        if(n%a[i]==0)
+        scanf("%d%d\n",&l,&j);
+        
+        if(j-l>=2)
         {
-            printf("Yes\n");
+            cnt++;
         }
         
-        else
-        {
-            j++;
-        }
     }
     
-    
-    
-    if(j==10)
-    {
-        printf("No\n");
-    }
+    printf("%d\n",cnt);
     
     return 0;
 }
