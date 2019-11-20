@@ -4,20 +4,33 @@
 
 int main()
 {
-    int i,l=0;
-    char a[100];
-    
-    scanf("%s\n",&a);
-    l=strlen(a);
-    
-    a[0]=toupper(a[0]);
-    
-    for(i=1;i<l;i++)
+    char s[101],c;
+    int l=0,u=0,i;
+    scanf("%s",s);
+    for(i=0; i<strlen(s); i++)
     {
-        a[i]=tolower(a[i]);
+        if(s[i]>=65&&s[i]<=90)
+            u++;
+        else if(s[i]>=97&&s[i]<=122)
+        {
+            l++;
+        }
     }
     
-    printf("%s\n",a);
-    
-    return 0;
+    if ( l>=u)
+    {
+        for ( i=0; i<strlen(s); i++)
+          {
+              c=s[i];
+              putchar (tolower(c));
+          }
+    }
+    else
+    {
+        for ( i=0; i<strlen(s); i++)
+          {
+              c=s[i];
+              putchar (toupper(c));
+          }
+    }
 }
