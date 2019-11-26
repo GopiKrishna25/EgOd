@@ -1,35 +1,19 @@
 #include<stdio.h>
 
-int main()
-{
-    int n,i,num=0,cnt=1;
-    scanf("%d",&n);
-    int a[n];
-    for(i=0; i<n; i++)
+int main() {
+    int a,b,cnt=0;
+
+    scanf("%d%d\n",&a,&b);
+    
+    while(a<=b)
     {
-        scanf("%d",&a[i]);
-    }
-    for(i=0; i<n-1; i++)
-    {
-        if(a[i]>a[i+1])
-        {
-            if(cnt>num)
-            {
-                num=cnt;
-            }
-            cnt=1;
-        }
-        else
-        {
-            cnt++;
-        }
+        a=a*3;
+        b=b*2;
         
+        cnt++;
     }
-    if(cnt>num)
-    {
-        num=cnt;
-    }
-        
-    printf("%d\n",num);
+    
+    printf("%d",cnt);
+    
     return 0;
 }

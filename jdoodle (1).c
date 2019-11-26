@@ -1,30 +1,38 @@
 #include<stdio.h>
-#include<string.h>
-
 
 int main()
 {
-    int i,j,cnt=0;
-    char n[30];
+    int n,i,j=0,k=0;
+    char s[20];
     
-    scanf("%s",&n);
+    scanf("%d\n",&n);
     
-    for(i=0;i<strlen(n);i++)
+    scanf("%s\n",&s);
+    
+    for(i=0;i<n;i++)
     {
-        if(n[i]=='4' || n[i]=='7')
+        if(s[i]=='A')
         {
-            cnt++;
+            j++;
+        }
+        else if(s[i]=='D')
+        {
+            k++;
         }
     }
     
-    if(cnt==4||cnt==7)
+    if(j<k)
     {
-        printf("Yes\n");
+        printf("Danik");
     }
-    else
+    else if(j>k)
     {
-        printf("No\n");
+        printf("Anton");
+    }
+    else if(j==k)
+    {
+        printf("Friendship");
     }
     
-    return 0;
+    return 0; 
 }
