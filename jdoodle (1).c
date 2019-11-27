@@ -2,37 +2,24 @@
 
 int main()
 {
-    int n,i,j=0,k=0;
-    char s[20];
+    int i,n,k;
     
-    scanf("%d\n",&n);
+    scanf("%d%d\n",&n,&k);
     
-    scanf("%s\n",&s);
-    
-    for(i=0;i<n;i++)
+    while(k--)
     {
-        if(s[i]=='A')
+        if(n%10==0)
         {
-            j++;
+            n=n/10;
         }
-        else if(s[i]=='D')
+        else
         {
-            k++;
+            n--;
         }
     }
     
-    if(j<k)
-    {
-        printf("Danik");
-    }
-    else if(j>k)
-    {
-        printf("Anton");
-    }
-    else if(j==k)
-    {
-        printf("Friendship");
-    }
+    printf("%d",n);
     
-    return 0; 
+    return 0;
+    
 }

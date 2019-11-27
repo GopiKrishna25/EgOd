@@ -1,19 +1,25 @@
 #include<stdio.h>
 
-int main() {
-    int a,b,cnt=0;
-
-    scanf("%d%d\n",&a,&b);
+int main() 
+{
+    int n,i,k=0;
+    int j[20];
+    scanf("%d\n",&n);
     
-    while(a<=b)
+    for(i=0;i<n;i++)
     {
-        a=a*3;
-        b=b*2;
-        
-        cnt++;
+      scanf("%d\n",&j[i]);  
     }
     
-    printf("%d",cnt);
+    for(i=0;i<n-1;i++)
+    {
+        if(j[i]==j[i+1])
+        {
+            k++;
+        }
+    }
+    
+    printf("%d",k);
     
     return 0;
 }
