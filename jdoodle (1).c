@@ -2,24 +2,34 @@
 
 int main()
 {
-    int i,n,k;
+    int n,k,i;
     
     scanf("%d%d\n",&n,&k);
     
-    while(k--)
+    if(n%2==0)
     {
-        if(n%10==0)
+        if(k<=n/2)
         {
-            n=n/10;
+            printf("%d\n",2*k-1);
         }
-        else
+        else 
         {
-            n--;
+            k=k-n/2;
+            printf("%d\n",2*k);
+        }
+    }
+    else 
+    {
+        if(k<=(n/2)+1)
+        {
+            printf("%d\n",2*k-1);
+        }
+        else 
+        {
+            k=k-(n/2)-1;
+            printf("%d\n",2*k);
         }
     }
     
-    printf("%d",n);
-    
     return 0;
-    
 }

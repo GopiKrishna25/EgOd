@@ -2,24 +2,29 @@
 
 int main() 
 {
-    int n,i,k=0;
-    int j[20];
-    scanf("%d\n",&n);
+    int n,h,i,cnt=0;
+    int a[100];    
+    
+    scanf("%d%d\n",&n,&h);
     
     for(i=0;i<n;i++)
     {
-      scanf("%d\n",&j[i]);  
+        scanf("%d\n",&a[i]);
     }
     
-    for(i=0;i<n-1;i++)
+    for(i=0;i<n;i++)
     {
-        if(j[i]==j[i+1])
+        if(a[i]>h)
         {
-            k++;
+            cnt+=2;
+        }
+        else 
+        {
+            cnt++;
         }
     }
     
-    printf("%d",k);
+    printf("%d",cnt);
     
     return 0;
 }

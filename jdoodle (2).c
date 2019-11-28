@@ -2,22 +2,31 @@
 
 int main()
 {
-    int n,i,l,j,cnt=0;
+    int i,n;
     
-    scanf("%d\n",&n);
+    scanf("%d",&n);
     
-    for(i=0;i<n;i++)
+    for(i=1;i<n;i++)
     {
-        scanf("%d%d\n",&l,&j);
-        
-        if(j-l>=2)
+        if(i%2==1)
         {
-            cnt++;
+            printf("I hate that\t");
         }
-        
+        else
+        {
+            printf("I love that\t");
+        }
     }
     
-    printf("%d\n",cnt);
+    if(n%2==1)
+    {
+        printf("I hate it\t");
+    }
+    else
+    {
+        printf("I love it\t");
+    }
     
     return 0;
+    
 }
