@@ -2,10 +2,10 @@
 
 int main() 
 {
-    int n,h,i,cnt=0;
-    int a[100];    
-    
-    scanf("%d%d\n",&n,&h);
+    int n,i;
+    double sum=0.0;
+    scanf("%d\n",&n);
+    int a[n];
     
     for(i=0;i<n;i++)
     {
@@ -14,17 +14,12 @@ int main()
     
     for(i=0;i<n;i++)
     {
-        if(a[i]>h)
-        {
-            cnt+=2;
-        }
-        else 
-        {
-            cnt++;
-        }
+        sum+=a[i];
     }
     
-    printf("%d",cnt);
+    sum=sum/n;
+    
+    printf("%.12lf\n",sum);
     
     return 0;
 }
