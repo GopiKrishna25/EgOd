@@ -2,39 +2,31 @@
 
 int main() 
 {
-    int i,j,a[5],cnt=0,tmp=0;
+    int n,i,j,x,y,cnt=0;
+    scanf("%d",&n);
+    int a[n],b[n];
     
-    for(i=0;i<4;i++)
+    for(i=0;i<n;i++)
     {
-        scanf("%d\n",&a[i]);    
+        scanf("%d%d",&x,&y);
+        a[i]=x;
+        b[i]=y;
     }
     
-    
-    for(i=0; i<4; ++i)
+    for(i=0; i<n; i++)
     {
-        for(j=i+1; j<4; ++j)
+        for(j=0; j<n; j++)
         {
-            if(a[i] >a[j])
+            if(a[i]==b[j])
             {
-                tmp = a[i];
-                a[i] = a[j];
-                a[j] = tmp;
+                cnt++;
             }
-        }
-    }
-    
-    
-    for(i=0;i<3;i++)
-    {
-        if(a[i]==a[i+1])
-        {
-            cnt++;
         }
     }
     
     printf("%d\n",cnt);
     
     return 0;
-    
+
     
 }
