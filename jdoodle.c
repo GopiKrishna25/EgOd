@@ -2,31 +2,19 @@
 
 int main() 
 {
-    int n,i,j,x,y,cnt=0;
-    scanf("%d",&n);
-    int a[n],b[n];
+    int a,b,temp=0;
     
-    for(i=0;i<n;i++)
+    scanf("%d%d",&a,&b);
+    
+    if(a>b)
     {
-        scanf("%d%d",&x,&y);
-        a[i]=x;
-        b[i]=y;
+        temp=a;
+        a=b;
+        b=temp;
     }
     
-    for(i=0; i<n; i++)
-    {
-        for(j=0; j<n; j++)
-        {
-            if(a[i]==b[j])
-            {
-                cnt++;
-            }
-        }
-    }
-    
-    printf("%d\n",cnt);
+    b=(b-a)/2;
+    printf("%d %d",a,b);
     
     return 0;
-
-    
 }
