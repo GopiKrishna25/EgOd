@@ -1,20 +1,35 @@
 #include<stdio.h>
 
-int main() 
+int main()
 {
-    int a,b,temp=0;
+    int n,i,cnt=0;
+    scanf("%d",&n);
+    int a[n];
     
-    scanf("%d%d",&a,&b);
-    
-    if(a>b)
+    for(i=0;i<n;i++)
     {
-        temp=a;
-        a=b;
-        b=temp;
+        scanf("%d",&a[i]);
     }
     
-    b=(b-a)/2;
-    printf("%d %d",a,b);
+    int maxx=a[0];
+    int minn=a[0];
     
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>maxx)
+        {
+            maxx=a[i];
+            cnt++;
+        }
+        if(a[i]<minn)
+        {
+           minn=a[i];
+           cnt++;
+        }
+    }
+    
+    
+    printf("%d\n",cnt);
+
     return 0;
 }
